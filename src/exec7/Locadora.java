@@ -1,3 +1,4 @@
+package exec7;
 
 import javax.swing.JOptionPane;
 //import javax.swing.text.StyledEditorKit.ForegroundAction;
@@ -10,7 +11,7 @@ import javax.swing.JOptionPane;
 //Classe Carro com seus atributos 
 public class Locadora {
 	static Carro vetorCarro[];
-	static int vetorAux[];
+	static Carro vetorAux[];
 
 // foi criado um metodo Locadora para abrir as opções ao usuario, primeiro foi criado com if else logo após 
 //	apliquei switch case para fazer a mesma função.
@@ -84,23 +85,35 @@ public class Locadora {
 		int j= 0;
 		String message = "";
 		for (int i = 0; i < vetorCarro.length; i++) {
-			if (vetorCarro[i].vendido == false && vetorCarro[i].modeloCarro.equals(modelo)) {
-				vetorAux[j]=i;
+			if (vetorCarro[i].vendido == false) {
+				if (vetorCarro[i].modeloCarro.equals(modelo)) {
+					vetorAux[j]=vetorCarro[i];
 				
-					message = message + "\nModelo do carro: " + vetorCarro[i].modeloCarro + "\nPlaca do Carro: "
+					message = message +"\n"+ j + " - Modelo do carro: " + vetorCarro[i].modeloCarro + "\nPlaca do Carro: "
 							+ vetorCarro[i].placaCarro + "\nVelocidade do Carro: " + vetorCarro[i].velocidadeMaxima
 							+ "\nCombustivel do Carro:" + vetorCarro[i].combustivel + "\nValor do Carro:"
 							+ vetorCarro[i].valor + "\n";
 					encontrou = true;
+					j++;
 				}
-				
 
-			
+			}
 		}
 		if (!encontrou) {
 			JOptionPane.showMessageDialog(null, "O carro Informado não foi encontrado");
 		} else {
 			JOptionPane.showMessageDialog(null, message);
+			int opcao = Integer.parseInt(JOptionPane.showInputDialog("Informe o carro desejado:"));
+			double valor = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor"));
+			
+			if (valor == vetorAux[opcao].valor) {
+				//vender
+			}else if (valor < vetorAux[opcao].valor) {
+				//não posso vender
+			}else {
+				//vendo e dou troco
+			}
+			
 		}
 	}
 
@@ -227,12 +240,12 @@ public class Locadora {
 	
 	public void buscarCorModelo(String modelo, String cor) {
 		boolean encontrou = false;
-		int aux = 1;
+
 		String message = "";
 		for (int i = 0; i < vetorCarro.length; i++) {
 			if (vetorCarro[i].vendido == false) {
 				if (vetorCarro[i].modeloCarro.equals(modelo)&&vetorCarro[i].cor.equals(cor)) {
-					message = message + "\n Opção de compra " + aux+"Modelo do carro: " + vetorCarro[i].modeloCarro + "\nPlaca do Carro: "
+					message = message + "\nModelo do carro: " + vetorCarro[i].modeloCarro + "\nPlaca do Carro: "
 							+ vetorCarro[i].placaCarro + "\nVelocidade do Carro: " + vetorCarro[i].velocidadeMaxima
 							+ "\nCombustivel do Carro:" + vetorCarro[i].combustivel + "\nValor do Carro:"
 							+ vetorCarro[i].valor + "\n";
@@ -245,7 +258,7 @@ public class Locadora {
 		if (!encontrou) {
 			JOptionPane.showMessageDialog(null, "Carro não encontrado!!");
 		} else {
-			comprarCarro(vetorCarro);
+			JOptionPane.showMessageDialog(null, message);
 		}
 	}
 
@@ -254,7 +267,7 @@ public class Locadora {
 	public static void main(String[] args) {
 
 		vetorCarro = new Carro[10];
-		vetorAux = new int [10];
+		vetorAux = new Carro [10];
 
 		Carro carro1 = new Carro("HONDA CIVIC", "KKK-4575", 200, "FLEX", 97.900, "PRETO", false);
 		vetorCarro[0] = carro1;
