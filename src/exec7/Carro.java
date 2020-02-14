@@ -17,12 +17,8 @@ public class Carro {
 	public Carro() {
 
 	}
-	public void Cor() {
-		
-	}
-
 //	Criação de atributos da classe Carro
-	public Carro(String modeloCarro, String placaCarro, int velocidadeMaxima, String combustivel, double valor,String cor) {
+	public Carro(String modeloCarro, String placaCarro, int velocidadeMaxima, String combustivel, double valor,String cor,boolean vendido) {
 
 		this.modeloCarro = modeloCarro;
 		this.placaCarro = placaCarro;

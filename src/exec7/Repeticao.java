@@ -7,10 +7,10 @@ public class Repeticao {
 	boolean exit = false;
 
 		public Repeticao() {
-//		while (!exit) {
-//			processar();
+	while (!exit) {
+		processar();
 			
-//		}
+	}
 			testaWhile();
 	}
 		

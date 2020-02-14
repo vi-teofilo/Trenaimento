@@ -235,34 +235,34 @@ public class Locadora1 {
 
 			vetorCarro = new Carro[10];
 
-			Carro carro1 = new Carro("HONDA CIVIC", "KKK-4575", 200, "FLEX", 97.900, "PRETO");
+			Carro carro1 = new Carro("HONDA CIVIC", "KKK-4575", 200, "FLEX", 97.900, "PRETO",false);
 			vetorCarro[0] = carro1;
 
-			Carro carro2 = new Carro("HB20", "VIX-6636", 145, "FLEX", 46.700, "PRETO");
+			Carro carro2 = new Carro("HB20", "VIX-6636", 145, "FLEX", 46.700, "PRETO",false);
 			vetorCarro[1] = carro2;
 
-			Carro carro3 = new Carro("HILUX", "CAR-0612", 250, "FLEX", 300.90, "AZUL");
+			Carro carro3 = new Carro("HILUX", "CAR-0612", 250, "FLEX", 300.90, "AZUL",false);
 			vetorCarro[2] = carro3;
 
-			Carro carro4 = new Carro("OPALA", "ROS-7545", 200, "ALCOOL", 200.000, "PRETO");
+			Carro carro4 = new Carro("OPALA", "ROS-7545", 200, "ALCOOL", 200.000, "PRETO",false);
 			vetorCarro[3] = carro4;
 
-			Carro carro5 = new Carro("ONIX", "FEL-4588", 135, "GASOLINA", 25.900, "AMARELO");
+			Carro carro5 = new Carro("ONIX", "FEL-4588", 135, "GASOLINA", 25.900, "AMARELO",false);
 			vetorCarro[4] = carro5;
 
-			Carro carro6 = new Carro("AUDI A4", "VAI-6060", 200, "FLEX", 90.900, "LARANJA");
+			Carro carro6 = new Carro("AUDI A4", "VAI-6060", 200, "FLEX", 90.900, "LARANJA",false);
 			vetorCarro[5] = carro6;
 
-			Carro carro7 = new Carro("POLO", "GAB-2102", 200, "FLEX", 53.830, "PRETO");
+			Carro carro7 = new Carro("POLO", "GAB-2102", 200, "FLEX", 53.830, "PRETO",false);
 			vetorCarro[6] = carro7;
 
-			Carro carro8 = new Carro("CAMARO", "WEL-4503", 250, "GASOLINA", 97.900, "AMARELO");
+			Carro carro8 = new Carro("CAMARO", "WEL-4503", 250, "GASOLINA", 97.900, "AMARELO",false);
 			vetorCarro[7] = carro8;
 
-			Carro carro9 = new Carro("CLIO", "VID-7149", 130, "GASOLINA", 20.000, "CINZA");
+			Carro carro9 = new Carro("CLIO", "VID-7149", 130, "GASOLINA", 20.000, "CINZA",false);
 			vetorCarro[8] = carro9;
 
-			Carro carro10 = new Carro("VELOSTER", "JAO-4455", 200, "FLEX", 90.450, "ROXO");
+			Carro carro10 = new Carro("VELOSTER", "JAO-4455", 200, "FLEX", 90.450, "ROXO",false);
 			vetorCarro[9] = carro10;
 
 			new Locadora();
