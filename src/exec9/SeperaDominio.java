@@ -3,7 +3,7 @@ package exec9;
 import javax.swing.JOptionPane;
 
 public class SeperaDominio {
-
+// esse metodo registra o @ e as informações de email do usuario 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String email = JOptionPane.showInputDialog(null, "Informe o email:", "Validador de email", 3);

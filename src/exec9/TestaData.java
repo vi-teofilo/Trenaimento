@@ -1,5 +1,7 @@
 package exec9;
 
+import model.Data;
+
 public class TestaData {
 
 	public static void main(String[] args) {

@@ -1,5 +1,10 @@
 package exec9;
-
+/* Classe criada para Faxineira 
+* @author vfurtado
+* @since 17/02/2020
+* @version 0.1
+*/
+//Classe Trim esse daqui tira os espaços da linha 
 public class Trim {
 
 	public static void main(String[] args) {
